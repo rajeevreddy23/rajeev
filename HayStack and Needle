@@ -1,0 +1,22 @@
+public class HaystackAndNeedle {
+
+    public static int findNeedle(String[] haystack, String needle) {
+        for (int i = 0; i < haystack.length; i++) {
+            if (haystack[i].equals(needle)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        String[] haystack = {"apple", "banana", "cherry", "date", "elderberry"};
+        String needle = "cherry";
+        int result = findNeedle(haystack, needle);
+        if (result != -1) {
+            System.out.println("Needle found at index " + result);
+        } else {
+            System.out.println("Needle not found");
+        }
+    }
+}
